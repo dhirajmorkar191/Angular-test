@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullname": "Trescha Twitching",
+      "gender": "Female"
+    },
+    {
+      "id": 2,
+      "fullname": "Mala Bresman",
+      "gender": "Female"
+    },
+    {
+      "id": 3,
+      "fullname": "Staford Sievewright",
+      "gender": "Genderfluid"
+    },
+    {
+      "id": 4,
+      "fullname": "Oren Barnbrook",
+      "gender": "Male"
+    },
+    {
+      "id": 5,
+      "fullname": "Yvette Strathearn",
+      "gender": "Female"
+    },
+    {
+      "id": 6,
+      "fullname": "Janette Middlehurst",
+      "gender": "Genderqueer"
+    },
+    {
+      "id": 7,
+      "fullname": "Malanie Geelancer",
+      "gender": "Agender"
+    },
+    {
+      "id": 8,
+      "fullname": "Wakefield Roberts",
+      "gender": "Male"
+    },
+    {
+      "id": 9,
+      "fullname": "Anoop Mishra",
+      "gender": "Male"
+    },
+    {
+      "id": 10,
+      "fullname": "John duo",
+      "gender": "Male"
+    }
+  ]
+}

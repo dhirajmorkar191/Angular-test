@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <h5 class="mt-2 mb-4">Users Data</h5>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">FullName</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Edit/Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userData ; let i = index">
+          <th scope="row">{{user.id}}</th>
+          <td>{{user.fullname}}</td>
+          <td>{{user.gender}}</td>
+          <td><button class="btn btn-success"  data-toggle="modal" data-target="#exampleModalLong" (click)="onEditClick(user)">Edit</button><button class="btn btn-danger ml-2" (click)="deleteUser(user.id)">Delete</button></td>
+        </tr> 
+      </tbody>
+    </table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Update user data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="userForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <label for="exampleInput">User Id</label>
+            <input type="number" class="form-control" id="exampleInput" formControlName="id" readonly>
+          </div>
+          <div class="form-group">
+            <label for="exampleInput">fullName</label>
+            <input type="text" class="form-control" placeholder="Enter Your Fullname" formControlName="fullname">
+          </div>
+          <div class="form-group">
+            <label for="exampleInput" >Gender</label><br>
+            <select class="form-control" aria-label="Default select example" formControlName="gender">
+              <option [ngValue]="null" disabled selected>Select gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Genderfluid">Genderfluid</option>
+              <option value="Agender">Agender</option>
+              <option value="Genderqueer">Genderqueer</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success ml-2"  type="submit" data-toggle="modal" data-target="#exampleModalLong" >Update</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
